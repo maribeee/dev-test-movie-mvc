@@ -1,3 +1,44 @@
+# About This Project
+
+This was an assessment for a job application, it was completed in two hours, and I was hired based on this assessment 
+
+It is a movie library app created in Laravel (php) with some VueJS components, demonstrating an MVC app with a VueJS frontend.
+
+
+## Overview of Work
+
+The following is a list of what code was written for this test and where within the Laravel folder structure you can find it:
+
+* app/Http/Controllers/MoviesController.php
+  * This is the controller that manages Movie API calls
+* app/Models/
+  * /Movie.php
+  * /User.php
+    * These are the models for the Movie and User objects
+* database/factories/...
+  * These are the factories that tell the seeders what data to seed into the database
+* database/migrations/...
+  * These are the migrations for the database structure
+* database/seeders
+  * Seeders which use factories to input dummy test data into the database
+* public/img/...
+  * Where images are stored (in this case just a hero image)
+* resources/js/Components
+  * /Movie.vue
+  * /Movies.vue
+    * These are the singular movie and multiple movies list components
+* resources/js/shared/services/...
+  * This is an Axios service that I created that allows you to access the database using axios calls more simply within the actual vue components. For example, instead of putting the full code for an axios call directly inside of Movies.vue, you can instead use the one line call: MovieRepo.getAllMovies();
+* resources/js/app.js
+  * This is where the vue app and components are initialized (this is a SPA)
+* resources/sass/...
+  * pre-compiled sass
+* routes/api.php
+  * routing info for the API, which points to the appropriate functions within the movie controller
+* routes/web.php
+  * Routing for the root page (and where any other page routing would go)
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
